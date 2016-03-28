@@ -1,0 +1,30 @@
+<h1>Hero form</h1>
+
+<div class="row">
+  <div class="col s12">
+    <form>
+      
+      <div class="input-field col s3">
+        <input id="name" type="text" class="validate" required/>
+        <label for="name">Name</label>
+      </div>
+      
+      <div class="input-field col s3">
+        <input class="validate" id="alterEgo" name="alterEgo" type="text" required/>
+        <label for="alterEgo">Alter Ego</label>
+      </div>
+      
+      <div class="input-field col s6">
+        <select required>
+          <option *ngFor="#p of powers" [value]="p">{{p}}</option>
+        </select>
+        <label>Powers</label>
+      </div>
+
+      <div class="col s12">
+        <button class="btn waves-effect waves-light" type="submit">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>
